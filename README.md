@@ -26,18 +26,21 @@ This Arduino-based system uses Bluetooth to track and log the presence of a tray
 
 * Set up the serving station devices by connecting the RTC module and the SHARP IR sensor to the MKR WiFi microcontroller (refer to https://docs.arduino.cc/built-in-examples/ for help with specific wiring diagrams).
 * Set up the tray devices by connecting the Bluefruit device to the Uno microcontroller (refer to https://docs.arduino.cc/built-in-examples/ for help with specific wiring diagrams).
-* Connect MKR Wifi board to a computer and upload files from the Arduino application in the following order:
-  * Upload RTC file first to configure the clock through the WiFi
-  * Upload the files within the "Central" folder to configure the Bluetooth specifics of the central device
-  * Upload the IR sensor file to activate the IR beam
 * Connect the Uno board to a computer and upload files from the Arduino application in the following order:
   * Upload RTC file first to configure the clock through the WiFi
   * Upload the files within the "Peripheral" folder to configure the Bluetooth specifics of the peripheral device
+* Connect MKR Wifi board to a computer and upload files from the Arduino application in the following order:
+  * Upload RTC file first to configure the clock through the WiFi
+  * Upload the files within the "Central" folder to configure the Bluetooth specifics of the central device (and keep the console running)
+  * Upload the IR sensor file to activate the IR beam (and keep the console running)
+* To test the functionality:
+ * Check that the console readings don't output errors
+ * Bring the tray close to the serving station. The Central file console should read the timestamp and RSSI of the Bluetooth connection  
+ * Reach across the IR sensor to grab a portion. The IR sensor file console should read the timestamp and the number of portions (if interrupted within a short time period)
 
 ## Authors
 * Bhushan Patel
-* ENG-SCI 156: Signals and Communication class staff
+* Billy Beauregard
 
 ## Acknowledgments
-* Professor Flavio Calmon
-* ENG-SCI 156: Signals and Communication class staff
+* Harvard Active Learning Labs staff
