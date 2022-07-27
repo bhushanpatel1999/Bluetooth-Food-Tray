@@ -1,4 +1,4 @@
-# SBluetooth-Food-Tray
+# Bluetooth-Food-Tray
 
 Building a Bluetooth-enabled food tray system to track individual portions and food waste for the Harvard Undergraduate Dining System
 
@@ -11,6 +11,11 @@ This Arduino-based system uses Bluetooth to track and log the presence of a tray
 ### Dependencies
 
 * Arduino desktop application
+* Arduino Uno microcontroller
+* Arduino MKR WiFi 1010 microcontroller
+* Adafruit DS3231 Precision RTC module
+* Adafruit SHARP IR distance sensor
+* Adafruit Bluefruit LE UART device
 * There are several C++ libraries that must be installed. These are listed at the beginning of each file. Any library that does not exist locally can be downloaded through the Arduino desktop application in the top toolbar.
 
 ### Installing
@@ -19,7 +24,15 @@ This Arduino-based system uses Bluetooth to track and log the presence of a tray
 
 ### Executing program
 
-* Since this is a Jupyter notebook, each block must be run sequentially using Shift + Enter. 
+* Set up the serving station devices by connecting the RTC module and the SHARP IR sensor to the MKR WiFi microcontroller (refer to https://docs.arduino.cc/built-in-examples/ for help with specific wiring diagrams).
+* Set up the tray devices by connecting the Bluefruit device to the Uno microcontroller (refer to https://docs.arduino.cc/built-in-examples/ for help with specific wiring diagrams).
+* Connect MKR Wifi board to a computer and upload files from the Arduino application in the following order:
+  * Upload RTC file first to configure the clock through the WiFi
+  * Upload the files within the "Central" folder to configure the Bluetooth specifics of the central device
+  * Upload the IR sensor file to activate the IR beam
+* Connect the Uno board to a computer and upload files from the Arduino application in the following order:
+  * Upload RTC file first to configure the clock through the WiFi
+  * Upload the files within the "Peripheral" folder to configure the Bluetooth specifics of the peripheral device
 
 ## Authors
 * Bhushan Patel
