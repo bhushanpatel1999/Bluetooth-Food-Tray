@@ -1,6 +1,6 @@
 # Bluetooth-Food-Tray
 
-Building a Bluetooth-enabled food tray system to track individual portions and food waste for the Harvard Undergraduate Dining System
+Building a Bluetooth-enabled food tray system to track individual portions and food waste for the Harvard Undergraduate Dining System.
 
 ## Description
 
@@ -20,7 +20,7 @@ This Arduino-based system uses Bluetooth to track and log the presence of a tray
 
 ### Installing
 
-* Install all files into a local directory in order to later upload to the respective Arduino boards.
+* Download all files into a local directory in order to later upload to the respective Arduino boards.
 
 ### Executing program
 
@@ -34,9 +34,9 @@ This Arduino-based system uses Bluetooth to track and log the presence of a tray
   * Upload the files within the "Central" folder to configure the Bluetooth specifics of the central device (and keep the console running)
   * Upload the IR sensor file to activate the IR beam (and keep the console running)
 * To test the functionality:
- * Check that the console readings don't output errors
- * Bring the tray close to the serving station. The Central file console should read the timestamp and RSSI of the Bluetooth connection  
- * Reach across the IR sensor to grab a portion. The IR sensor file console should read the timestamp and the number of portions (if interrupted within a short time period)
+  * Check that the console readings don't output errors
+  * Bring the tray close to the serving station. The Central file console should read the timestamp and RSSI of the Bluetooth connection  
+  * Reach across the IR sensor to grab a portion. The IR sensor file console should read the timestamp and the number of portions (if interrupted within a short time period)
 
 ## Authors
 * Bhushan Patel
