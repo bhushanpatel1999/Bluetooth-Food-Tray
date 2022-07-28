@@ -1,4 +1,4 @@
-# Bluetooth-Food-Tray
+# Bluetooth Food Tray
 
 Building a Bluetooth-enabled food tray system to track individual portions and food waste for the Harvard Undergraduate Dining System.
 
